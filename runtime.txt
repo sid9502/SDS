@@ -1,1 +1,2 @@
-Python 3.9.7
+$ cat runtime.txt
+python-3.9.7
