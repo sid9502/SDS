@@ -1,0 +1,94 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+     <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+rel="stylesheet"
+/>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-dark">
+       <span class="navbar-brand mb-0 h1" style="color: ivory;">Movie Fetcher </span>
+       
+    </nav>
+    <h2>Example heading <span class="badge bg-primary">New</span></h2>
+    <div class="dropdown">
+      <!--Trigger-->
+      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1-1"
+        data-toggle="dropdown">Bootstrap
+        search</button>
+    
+      <!--Menu-->
+      <div class="dropdown-menu dropdown-primary" id="your-custom-id">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <a class="dropdown-item mdb-dropdownLink-1" href="https://mdbootstrap.com/">MDB</a>
+        <a class="dropdown-item mdb-dropdownLink-1" href="https://mdbootstrap.com/docs/react/">MDB react</a>
+        <a class="dropdown-item mdb-dropdownLink-1" href="https://mdbootstrap.com/docs/angular/">MDB angular</a>
+        <a class="dropdown-item mdb-dropdownLink-1" href="https://mdbootstrap.com/docs/vue/">MDB vue</a>
+        <a class="dropdown-item mdb-dropdownLink-1" href="https://brandflow.net/">BrandFlow</a>
+        <a class="dropdown-item mdb-dropdownLink-1" href="https://mdbootstrap.com/education/bootstrap/">MDB
+          Rocks</a>
+      </div>
+      <select class="mdb-select md-form" searchable="Search here..">
+        <option value="" disabled selected>Choose your country</option>
+        <option value="1">USA</option>
+        <option value="2">Germany</option>
+        <option value="3">France</option>
+        <option value="3">Poland</option>
+        <option value="3">Japan</option>
+      </select>
+    </div>
+    <!-- MDB -->
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<ul id="myUL">
+  <li><a href="#">Adele</a></li>
+  <li><a href="#">Agnes</a></li>
+
+  <li><a href="#">Billy</a></li>
+  <li><a href="#">Bob</a></li>
+
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+</ul>
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+  
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+  </script>
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+></script>
+  </body>
+  </html>
+    
