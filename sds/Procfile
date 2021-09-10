@@ -1,1 +1,1 @@
-web: gunicorn sds.wsgi --log-file -
+web:gunicorn sds.wsgi --log-file -
