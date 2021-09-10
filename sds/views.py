@@ -79,9 +79,10 @@ def results(request):
       if sort=="0":
             mylist.sort()
       elif sort=="1":
-            print("hello")
             mylist.sort(reverse=True,key=str.lower)
       print(mylist)
+      if mylist==[]:
+         return render(request,'alert.html') 
       params2={'list':mylist}
       # print(mylist)
       return render(request,'page2.html',params2)
