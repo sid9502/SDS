@@ -12,7 +12,7 @@
             <h3 style="text-align: center;">Results</h3>
             
             <div style="width:600px; margin:auto;" >
-              <input class="form-control glyphicon glyphicon-search" id ="input" type="text" onkeyup="myFunction()" placeholder="TV shows Search..." style="width: 500px;margin-left: 70px; margin-bottom: 50px; margin-top: 30px;height: 40px; border-radius: 20px; border-style: solid; " autofocus=False >
+           
               
                 <ul id="ul" class="listgroup" style="text-align: center;">
                    {% for listitem in list %} 
@@ -23,26 +23,7 @@
             </div>
             
 
-            <script>
-              function myFunction() {
-                
-                var input, filter, ul, li, a, i, txtValue;
-                input = document.getElementById('input');
-                filter = input.value.toUpperCase();
-                ul = document.getElementById("ul");
-                li = ul.getElementsByTagName('li');
               
-                for (i = 0; i < li.length; i++) {
-                  a = li[i]
-                  txtValue = a.textContent || a.innerText;
-                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                  } else {
-                    li[i].style.display = "none";
-                  }
-                }
-              }
-              </script>     
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
